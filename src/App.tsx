@@ -89,9 +89,14 @@ function App() {
       </div>
       <div className="selectContainer">
       <label htmlFor="year">Year</label>
-      <select className="dateDropDown" name="year" id="year" onChange={yearChanged}>
+      {/* <select className="dateDropDown" name="year" id="year" onChange={yearChanged}>
         {[...Array(new Date().getFullYear() - 1800)].map((e, i) =>{
           return <option key={i} value={i+1800}>{i+1801}</option>
+        })}
+      </select> */}
+      <select className="dateDropDown" name="year" id="year" onChange={yearChanged}>
+        {[...Array(new Date().getFullYear() - 1800)].map((e, i) =>{
+          return <option key={i} value={2021 - i - 1}>{2021 - i}</option>
         })}
       </select>
       </div>
