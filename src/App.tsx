@@ -60,6 +60,7 @@ function App() {
   const yearChanged = (e: any) =>{
     const newYear = Number(e.target.value) + 1;
     setCurYear(newYear);
+    setDaysInMonth(getDaysInMonth(curMonthNum, newYear));
     setLifePathNum(getLifePathNumber(`${curDay}/${curMonthNum}/${newYear}`));
   }
 
