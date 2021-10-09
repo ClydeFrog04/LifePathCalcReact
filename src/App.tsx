@@ -32,8 +32,8 @@ function App() {
     "December"
   ]
 
-  const [curDay, setCurDay] = useState(8);
-  const [curYear, setCurYear] = useState(1801);
+  const [curDay, setCurDay] = useState(1);
+  const [curYear, setCurYear] = useState(new Date().getFullYear());
   const [curMonth, setCurMonth] = useState(months[0]);
   const [curMonthNum, setCurMonthNum] = useState(1);//the integer representation of the current selected month, jan is 1, feb 2 and so on
   const [daysInMonth, setDaysInMonth] = useState(getDaysInMonth(curMonthNum, curYear));
